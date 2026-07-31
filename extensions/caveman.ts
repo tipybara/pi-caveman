@@ -245,7 +245,7 @@ export default function caveman(pi: ExtensionAPI) {
 
 		const anim = ANIMATIONS[level];
 		const setFrame = (frame: string) => {
-			ctx.ui.setStatus("caveman", frame + " " + theme.fg("muted", "caveman level: ") + theme.fg("text", anim.label));
+			ctx.ui.setStatus("caveman", frame + " " + theme.fg("muted", "caveman: ") + theme.fg("text", anim.label));
 		};
 
 		if (!isActive) {

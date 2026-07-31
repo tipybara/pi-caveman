@@ -1,7 +1,7 @@
 {
-  "name": "pi-caveman",
-  "version": "1.0.8",
-  "description": "Why use many token when few do trick. Caveman mode for pi — cuts ~75% output tokens while keeping full technical accuracy.",
+  "name": "@local/pi-caveman-custom",
+  "version": "1.0.8-custom.1",
+  "description": "Local fork of pi-caveman: compact footer label",
   "keywords": [
     "pi-package",
     "pi-extension",
@@ -18,8 +18,13 @@
   "files": [
     "extensions",
     "README.md",
+    "original_readme.md",
+    "CUSTOM_PATCHES.md",
     "LICENSE"
   ],
+  "scripts": {
+    "test": "bun scripts/test-systemprompt-coerce.mjs"
+  },
   "pi": {
     "extensions": [
       "./extensions/caveman.ts"
@@ -27,6 +32,8 @@
     "image": "https://raw.githubusercontent.com/jonjonrankin/pi-caveman/main/pi-caveman.gif"
   },
   "peerDependencies": {
-    "@earendil-works/pi-coding-agent": "*"
-  }
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "private": true
 }
